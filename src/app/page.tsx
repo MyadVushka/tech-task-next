@@ -1,95 +1,98 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import styles from "./page.module.css";
+import StatisticBlock from "@/components/StatisticBlock";
+import AppDownload from "@/components/AppDownload";
+import googlePlay from "../../public/googlePlay.svg";
+import appStore from "../../public/appStore.svg";
+import FeedbackCard from "@/components/FeedbackCard";
+import Avatar1 from "../../public/photo4.png";
+import Avatar2 from "../../public/photo1.png";
+import Avatar3 from "../../public/photo3.png";
+import Avatar4 from "../../public/photo2.png";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.main_wrapper}>
+      <div className={styles.text_container}>
+        <h1 className={styles.title}>
+          Do you want to Learn more <br /> About cryptocurrencies <br />{" "}
+          <span className={styles.title_span}>quickly and easily ?</span>
+        </h1>
+        <h2 className={styles.subtitle}>
+          Subscribe to our channel to learn more
+        </h2>
+        <div className={styles.statistic_section}>
+          <StatisticBlock title="20K+" subtitle="subscribes" />
+          <StatisticBlock title="19,5K" subtitle="successful cases" />
+          <StatisticBlock title="4.8/5" subtitle="rating" />
+        </div>
+        <button className={styles.subscribe_button}>
+          <span>Join Whatsapp</span>
+        </button>
+        <div className={styles.downloader_section}>
+          <AppDownload
+            image={googlePlay}
+            title="get it on "
+            subtitle="Google play"
+          />
+          <AppDownload
+            image={appStore}
+            title="Available on the"
+            subtitle="App store"
+          />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.card_container}>
+        <div className={styles.image_container}>
+          <img
+            className={`${styles.crypto_img} ${styles.first_img}`}
+            src="/Bitcoin.svg"
+            alt="bitcoin"
+          />
+          <img
+            className={`${styles.crypto_img} ${styles.second_img}`}
+            src="/Litecoin.svg"
+            alt="litecoin"
+          />
+          <img
+            className={`${styles.crypto_img} ${styles.third_img}`}
+            src="/Ethereum.svg"
+            alt="ethereum"
+          />
+        </div>
+        <div className={styles.feedback_container}>
+          <FeedbackCard
+            img={Avatar1}
+            name="Lorenzo"
+            tg_id="@lorenzoo"
+            feedback="Amazing Telegram bot! Provides real-time crypto prices and news"
+            id="odd"
+          />
+          <FeedbackCard
+            img={Avatar2}
+            name="Adalina"
+            tg_id="@ada"
+            feedback="Must-have bot for crypto traders. Accurate signals and analysis"
+            id="even"
+          />
+          <FeedbackCard
+            img={Avatar3}
+            name="Alexander"
+            tg_id="@alex_x"
+            feedback="Superb cryptocurrency bot! Quick updates and reliable data"
+            id="odd"
+          />
+          <FeedbackCard
+            img={Avatar4}
+            name="Rushana"
+            tg_id="@Hana"
+            feedback="Efficient and user-friendly bot. Simplifies crypto trading tasks"
+            id="even"
+          />
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Home;

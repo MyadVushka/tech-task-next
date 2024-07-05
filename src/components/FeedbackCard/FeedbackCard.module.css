@@ -1,0 +1,47 @@
+.card_wrapper {
+  padding: 18px 24px;
+  border: 1px solid transparent;
+  background: linear-gradient(to right, #7c6fcff7, #74aeaaf2, #6fcf97);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(31, 29, 29, 0.487);
+  backdrop-filter: blur(10px);
+  width: 300px;
+}
+
+.odd {
+  align-self: center;
+}
+
+.card_content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.main_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tg_id {
+  color: #f2f2f266;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.feedback {
+  max-width: 225px;
+  color: #f2f2f2;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1;
+}

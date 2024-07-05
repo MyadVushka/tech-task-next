@@ -1,0 +1,15 @@
+.statistic_block_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    line-height: 1.5;
+}
